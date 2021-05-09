@@ -1,11 +1,13 @@
 public class AscendingSequence {
 
-    public int[] buildAscendingArray (int endNumber) {
-        int[] array = new int[endNumber];
+    public int[] buildAscendingArray (int startNumber, int endNumber) {
+        int[] array = new int[endNumber - startNumber + 1];
 
-        for (int i = 1; i <= endNumber; i ++) {
-            array[i - 1] = i;
+        for (int i = 0; i < endNumber - startNumber + 1; i ++) {
+            array[i] = startNumber + i;
+            System.out.print(array[i]);
         }
+
         return array;
     }
 }
