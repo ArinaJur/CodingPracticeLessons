@@ -33,11 +33,6 @@ public class AscSeqNumbers {
         System.out.println(num);
     }
 
-
-
-
-
-
     public static void main(String[] args) {
         numbers(5);
         System.out.println();
