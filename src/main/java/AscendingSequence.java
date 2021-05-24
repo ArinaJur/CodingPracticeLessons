@@ -11,4 +11,25 @@ public class AscendingSequence {
         return array;
     }
 
+    //конкатенация строк "а" + "б"
+    //String.format()
+    //String.concat()
+    //StringBuilder
+
+    public String buildAscendingString(int startNumber, int endNumber) {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        if (startNumber < endNumber && startNumber >= Integer.MIN_VALUE && endNumber <= Integer.MAX_VALUE) {
+            for (int i = startNumber; i < endNumber; i ++) {
+                stringBuilder.append(i).append(", ");
+            }
+            stringBuilder.append(endNumber);
+            System.out.println(stringBuilder);
+
+            return String.valueOf(stringBuilder);
+        } else {
+
+            return "Error";
+        }
+    }
 }
