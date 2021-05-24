@@ -1,6 +1,6 @@
 package challenge;
 
-public class RecordedChellenge {
+public class RecordedChallenge {
 
 //    Написать метод, который принимает массив чисел и печатает вторую половину массива
 //    Пример: {1, 2, 3, 4, 5, 6}
@@ -42,6 +42,20 @@ public class RecordedChellenge {
         System.out.println();
     }
 
+    private static final String COMA_SPACE = ", ";
+
+    public static void printSecondHalfOfArray4(int[] array){
+        int startIndex = (array.length + 1) / 2;
+        int endIndex = array.length - 1;
+
+        for (int i = startIndex; i < endIndex; i++){
+            System.out.print(array[i] + COMA_SPACE);
+        }
+        System.out.println(array[endIndex]);
+    }
+
+
+
     public static void main(String[] args) {
         int[] arrayOdd = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] arrayOdd1 = {1, 2, 3, 4, 5};
@@ -64,6 +78,8 @@ public class RecordedChellenge {
         printSecondHalfOfArray3(arrayOdd1);
         printSecondHalfOfArray3(arrayOdd2);
         printSecondHalfOfArray3(arrayEven);
+
+        printSecondHalfOfArray4(arrayOdd2);
 
     }
 
