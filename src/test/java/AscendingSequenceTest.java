@@ -1,6 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class AscendingSequenceTest {
 
     @Test
@@ -121,5 +124,32 @@ public class AscendingSequenceTest {
         String actualResult = ascendingSequence.buildAscendingString(startNumber, endNumber);
 
         Assert.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testAscendingListHappyPath() {
+        int startNumber = 1;
+        int endNumber = 5;
+        int step = 1;
+        List<Integer> expectedResults = List.of(1, 2, 3, 4, 5);
+        //List<Integer> expectedResult = Arrays.asList(1, 2, 3, 4, 5);
+
+        AscendingSequence ascendingSequence = new AscendingSequence();
+        List<Integer> actualResults = ascendingSequence.buildAscendingList(startNumber, endNumber, step);
+
+        Assert.assertEquals(expectedResults, actualResults);
+    }
+
+    @Test
+    public void testAscendingListStep10() {
+        int startNumber = 0;
+        int endNumber = 100;
+        int step = 10;
+        List<Integer> expectedResults = List.of(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+
+        AscendingSequence ascendingSequence = new AscendingSequence();
+        List<Integer> actualResults = ascendingSequence.buildAscendingList(startNumber, endNumber, step);
+
+        Assert.assertEquals(expectedResults, actualResults);
     }
 }

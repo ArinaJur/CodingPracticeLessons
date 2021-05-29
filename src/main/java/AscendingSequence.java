@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class AscendingSequence {
 
     public int[] buildAscendingArray (int startNumber, int endNumber) {
@@ -31,5 +34,16 @@ public class AscendingSequence {
 
             return "Error";
         }
+    }
+
+    //1, 2, 3, 4, 5
+
+    public List<Integer> buildAscendingList(int startNumber, int endNumber,  int step) {
+        List<Integer> list = new ArrayList<>();
+
+        for(int i = startNumber; i <= endNumber; i += step) {
+            list.add(i);
+        }
+        return list;
     }
 }
