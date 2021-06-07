@@ -102,7 +102,7 @@ public class FizzBuzz {
     }
 
     public static void main(String[] args) {
-        fizzBuzzWoof(1000);
+        fizzBuzzWoof(100);
     }
 
 }
