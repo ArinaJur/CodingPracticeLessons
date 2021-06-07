@@ -14,7 +14,7 @@ public class RecordingChallenge2 {
         List<Integer> list = new ArrayList<>();
 
         for(int number: array) {
-            int firstNumber =  number/ 10;
+            int firstNumber =  number / 10;
             int secondNumber = number % 10;
 
             if ((firstNumber + secondNumber) % 2 == 0) {
@@ -35,7 +35,5 @@ public class RecordingChallenge2 {
         int[] array = {45,  34, 25, 68, 91};
 
         System.out.println(returnListEvenNumbers(array));
-
-
     }
 }
