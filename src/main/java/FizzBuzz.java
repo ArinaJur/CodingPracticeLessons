@@ -88,7 +88,6 @@ public class FizzBuzz {
                 c++;
             }
 
-
             if (c == 0) {
                 result += i + ", ";
             } else {
@@ -98,11 +97,11 @@ public class FizzBuzz {
 
         result = result.substring(0, result.length() - 2);
         System.out.println(result);
+        
         return result;
     }
 
     public static void main(String[] args) {
         fizzBuzzWoof(100);
     }
-
 }
