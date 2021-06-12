@@ -39,6 +39,16 @@ public class FizzBuzz {
     // “Buzz” if an integer contains 5,
     // “Woof” if an integer is divisible by 7
     // “Woof” if an integer contains 7
+    
+    //Fizz Buzz Woof: одна вариация расширилась до такой степени, 
+    //что получила собственное имя. 
+    //В этом случае число 3 становится Fizz, 
+    //5 становится Buzz, 
+    //а 7 становится Woof. 
+    //Основные правила в этой игре: любое число, 
+    //которое содержит число или делится на это число, заменяется вхождением слова. 
+    //Если число имеет 2 экземпляра этого числа (т. Е. 33 или 55) и делится на это число, 
+    //то слово произносится в этом примере три раза.
 
     public static String fizzBuzzWoof(int n) {
         String result = "";
@@ -88,7 +98,6 @@ public class FizzBuzz {
                 c++;
             }
 
-
             if (c == 0) {
                 result += i + ", ";
             } else {
@@ -98,11 +107,11 @@ public class FizzBuzz {
 
         result = result.substring(0, result.length() - 2);
         System.out.println(result);
+        
         return result;
     }
 
     public static void main(String[] args) {
-        fizzBuzzWoof(1000);
+        fizzBuzzWoof(100);
     }
-
 }
