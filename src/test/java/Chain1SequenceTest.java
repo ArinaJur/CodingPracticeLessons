@@ -42,4 +42,41 @@ public class Chain1SequenceTest {
 
         Assert.assertEquals(expectedValues, actualValues);
     }
+
+    @Test
+    public void testChain1SequenceString() {
+
+        String value = "kghsafd";
+        List<String> expectedValues = null;
+
+        Chain1Sequence chain1Sequence = new Chain1Sequence();
+        List<String> actualValues = chain1Sequence.getExpectedValues(value);
+
+        Assert.assertEquals(expectedValues, actualValues);
+    }
+
+    @Test
+    public void testChain1SequenceUnicode() {
+
+        String value = "U+263A";
+        List<String> expectedValues = null;
+
+        Chain1Sequence chain1Sequence = new Chain1Sequence();
+        List<String> actualValues = chain1Sequence.getExpectedValues(value);
+
+        Assert.assertEquals(expectedValues, actualValues);
+    }
+
+    @Test
+    public void testChain1SequenceZerosAtTheBeginning() {
+
+        String value = "00700";
+        List<String> expectedValues = List.of("700", "1400", "2800", "5600", "11200", "22400", "44800", "89600",
+                "179200", "358400");
+
+        Chain1Sequence chain1Sequence = new Chain1Sequence();
+        List<String> actualValues = chain1Sequence.getExpectedValues(value);
+
+        Assert.assertEquals(expectedValues, actualValues);
+    }
 }
